@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find3dPrinting.Views", "Find3dPrinting.Views\Find3dPrinting.Views.csproj", "{8BBA6A9E-FEE5-42AC-B46A-1E5D4A73444C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find3dPrinting.Data.Interfaces", "Find3dPrinting.Data.Interfaces\Find3dPrinting.Data.Interfaces.csproj", "{6E01C971-5D1E-48B9-806E-32A33927B39E}"
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find3dPrinting.Data.EF", "Find3dPrinting.Data.EF\Find3dPrinting.Data.EF.csproj", "{0F9CAB63-CF0C-4E0B-A53D-5D50193231CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find3dPrinting.Models", "Find3dPrinting.Models\Find3dPrinting.Models.csproj", "{8BED1BD7-6F87-4790-9143-C7F980FFCFF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find3dPrinting.Controllers", "Find3dPrinting.Controllers\Find3dPrinting.Controllers.csproj", "{6A41A63A-C84C-45FB-9F54-F37E8FB41F7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{8BED1BD7-6F87-4790-9143-C7F980FFCFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BED1BD7-6F87-4790-9143-C7F980FFCFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BED1BD7-6F87-4790-9143-C7F980FFCFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A41A63A-C84C-45FB-9F54-F37E8FB41F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A41A63A-C84C-45FB-9F54-F37E8FB41F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A41A63A-C84C-45FB-9F54-F37E8FB41F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A41A63A-C84C-45FB-9F54-F37E8FB41F7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
