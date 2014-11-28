@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace Find3dPrinting.Controllers
+namespace Find3dPrinting
 {
     public static class WebApiConfig
     {

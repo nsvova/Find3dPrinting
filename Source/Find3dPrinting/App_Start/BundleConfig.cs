@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Find3dPrinting.Controllers
+namespace Find3dPrinting
 {
     public class BundleConfig
     {

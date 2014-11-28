@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Find3dPrinting.Controllers")]
+[assembly: AssemblyTitle("Find3dPrinting")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("______")]
-[assembly: AssemblyProduct("Find3dPrinting.Controllers")]
+[assembly: AssemblyProduct("Find3dPrinting")]
 [assembly: AssemblyCopyright("Copyright © ______ 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

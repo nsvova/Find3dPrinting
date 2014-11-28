@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Find3dPrinting.Controllers
+namespace Find3dPrinting
 {
     public class RouteConfig
     {
