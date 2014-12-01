@@ -49,6 +49,20 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Find3dPrinting.Data.EF\Find3dPrinting.Data.EF.csproj">
+      <Project>{0f9cab63-cf0c-4e0b-a53d-5d50193231cd}</Project>
+      <Name>Find3dPrinting.Data.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Find3dPrinting.Data.Interfaces\Find3dPrinting.Data.Interfaces.csproj">
+      <Project>{6e01c971-5d1e-48b9-806e-32a33927b39e}</Project>
+      <Name>Find3dPrinting.Data.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Find3dPrinting.Models\Find3dPrinting.Models.csproj">
+      <Project>{8bed1bd7-6f87-4790-9143-c7f980ffcff3}</Project>
+      <Name>Find3dPrinting.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

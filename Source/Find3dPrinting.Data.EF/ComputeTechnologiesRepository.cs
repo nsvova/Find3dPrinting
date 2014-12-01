@@ -7,12 +7,8 @@ using Find3dPrinting.Models;
 
 namespace Find3dPrinting.Data.EF
 {
-    public class ComputeTechnologiesRepository : DataModel<ComputeTechnology>
+    public class ComputeTechnologiesRepository : Find3dPrintingRepository<ComputeTechnology>
     {
-        public override void Add(int id)
-        {
-            base.Add(id);
-        }
 
         public override void Add(ComputeTechnology model)
         {
@@ -43,5 +39,20 @@ namespace Find3dPrinting.Data.EF
         {
             base.Update(id, newModel);
         }
+
+        public override void Update(ComputeTechnology oldModel, ComputeTechnology newModel)
+        {
+            base.Update(oldModel, newModel);
+        }
+
+        public override IList<ComputeTechnology> GetAll()
+        {
+            return base.GetAll();
+        }
+
+        public override ComputeTechnology GetFirst()
+        {
+            return base.GetFirst();
+        } 
     }
 }

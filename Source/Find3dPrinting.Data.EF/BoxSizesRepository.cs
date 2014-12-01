@@ -7,21 +7,20 @@ using Find3dPrinting.Models;
 
 namespace Find3dPrinting.Data.EF
 {
-    public class MaterialsRepository : Find3dPrintingRepository<Material>
+    public class BoxSizesRepository : Find3dPrintingRepository<BoxSize>
     {
 
-
-        public override void Add(Material model)
+        public override void Add(BoxSize model)
         {
             base.Add(model);
         }
 
-        public override Material GetById(int id)
+        public override BoxSize GetById(int id)
         {
             return base.GetById(id);
         }
 
-        public override Material GetById(int[] id)
+        public override BoxSize GetById(int[] id)
         {
             return base.GetById(id);
         }
@@ -31,29 +30,30 @@ namespace Find3dPrinting.Data.EF
             base.Remove(id);
         }
 
-        public override void Remove(Material model)
+        public override void Remove(BoxSize model)
         {
             base.Remove(model);
         }
 
-        public override void Update(int id, Material newModel)
+        public override void Update(int id, BoxSize newModel)
         {
             base.Update(id, newModel);
         }
 
-        public override void Update(Material oldModel, Material newModel)
+        public override void Update(BoxSize oldModel, BoxSize newModel)
         {
             base.Update(oldModel, newModel);
         }
 
-        public override IList<Material> GetAll()
+        public override IList<BoxSize> GetAll()
         {
             return base.GetAll();
         }
 
-        public override Material GetFirst()
+        public override BoxSize GetFirst()
         {
             return base.GetFirst();
         } 
+
     }
 }

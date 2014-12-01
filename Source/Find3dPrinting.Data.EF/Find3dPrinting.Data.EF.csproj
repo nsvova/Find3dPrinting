@@ -64,8 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxSizesRepository.cs" />
     <Compile Include="ComputeTechnologiesRepository.cs" />
-    <Compile Include="DataModel.cs" />
+    <Compile Include="Find3dPrintingRepository.cs" />
     <Compile Include="DeliveriesRepository.cs" />
     <Compile Include="Find3dPrintingDBContext.cs" />
     <Compile Include="ManufacturersRepository.cs" />

@@ -7,12 +7,8 @@ using Find3dPrinting.Models;
 
 namespace Find3dPrinting.Data.EF
 {
-    public class PaymentsRepository : DataModel<Payment>
+    public class PaymentsRepository : Find3dPrintingRepository<Payment>
     {
-        public override void Add(int id)
-        {
-            base.Add(id);
-        }
 
         public override void Add(Payment model)
         {
@@ -43,5 +39,20 @@ namespace Find3dPrinting.Data.EF
         {
             base.Update(id, newModel);
         }
+
+        public override void Update(Payment oldModel, Payment newModel)
+        {
+            base.Update(oldModel, newModel);
+        }
+
+        public override IList<Payment> GetAll()
+        {
+            return base.GetAll();
+        }
+
+        public override Payment GetFirst()
+        {
+            return base.GetFirst();
+        } 
     }
 }

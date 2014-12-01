@@ -7,12 +7,8 @@ using Find3dPrinting.Models;
 
 namespace Find3dPrinting.Data.EF
 {
-    public class DeliveriesRepository : DataModel<Delivery>
+    public class DeliveriesRepository : Find3dPrintingRepository<Delivery>
     {
-        public override void Add(int id)
-        {
-            base.Add(id);
-        }
 
         public override void Add(Delivery model)
         {
@@ -43,5 +39,21 @@ namespace Find3dPrinting.Data.EF
         {
             base.Update(id, newModel);
         }
+
+        public override void Update(Delivery oldModel, Delivery newModel)
+        {
+            base.Update(oldModel, newModel);
+        }
+
+        public override IList<Delivery> GetAll()
+        {
+            return base.GetAll();
+        }
+
+        public override Delivery GetFirst()
+        {
+            return base.GetFirst();
+        } 
+
     }
 }

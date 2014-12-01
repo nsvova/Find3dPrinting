@@ -15,9 +15,9 @@ namespace Find3dPrinting.Data.EF
     using System.Data.Entity.Infrastructure;
     using Find3dPrinting.Models;
 
-    public partial class Find3dPrintingEntities : DbContext
+    public partial class Find3dPrintingContext : DbContext
     {
-        public Find3dPrintingEntities()
+        public Find3dPrintingContext()
             : base("name=Find3dPrintingEntities")
         {
             
