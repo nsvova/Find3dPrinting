@@ -1,0 +1,59 @@
+
+#properties-container{
+    padding:5px;
+}
+
+#navigatoin-header{
+    margin:auto;
+    padding:3px;
+    height: 50px;
+    border-radius: 3px;
+    border: solid 1px grey;
+}
+#inner-properties-container{
+    margin:auto;
+    margin-top:5px;
+    padding:3px;
+    border-radius: 3px;
+    border: solid 1px grey;
+}
+
+#inner-div{
+     margin:auto;
+     padding:3px;
+ }
+
+#inner-div > div{
+    margin:auto;
+    margin-top:5px;
+}
+
+/* All inputs */
+#inner-div > div  input{
+    margin:auto;
+    margin-top:5px;
+    height:40px;
+
+}
+
+
+/* DUBLICATION !! REFACTOR */
+#inner-div2{
+    margin:auto;
+    padding:3px;
+}
+
+#inner-div2 > div{
+    margin:auto;
+    margin-top:5px;
+
+}
+
+
+/* All inputs */
+#inner-div2 > div  input{
+    margin:auto;
+    margin-top:5px;
+    height:40px;
+}
+

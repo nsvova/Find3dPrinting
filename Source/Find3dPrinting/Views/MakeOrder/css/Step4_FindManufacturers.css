@@ -1,0 +1,22 @@
+
+#properties-container{
+    padding:5px;
+}
+
+#navigatoin-header{
+    margin:auto;
+    padding:3px;
+    height: 50px;
+    border-radius: 3px;
+    border: solid 1px grey;
+}
+#inner-properties-container{
+    margin:auto;
+    margin-top:5px;
+    padding:5px;
+    border-radius: 3px;
+    border: solid 1px grey;
+}
+#inner-properties-container > div{
+    padding: 5px;
+}

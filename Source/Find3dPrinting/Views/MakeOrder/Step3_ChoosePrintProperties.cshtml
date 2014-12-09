@@ -1,0 +1,225 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=10">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Step3</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/Step3_ChoosePrintingProperties.css">
+
+    </head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- NAVBAR DIV -->
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">3dPrintingService.net</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li class="active"><a href="#">Make order</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- STEPS IMG CONTAINER -->
+        <div class="row" style="height:100px;background-color: #9bb7c0">steps-img div [PARTIAL]</div>
+
+        <!-- PROPERTIES CONTAINER -->
+        <div id="properties-container" class="row">
+
+            <!-- NAVIGATION HEADER DIV -->
+            <div id="navigatoin-header" class="row">
+                <button type="button" class="btn btn-link">< Back</button>
+            </div>
+
+            <!-- INNER CONTAINER FOR PROPERTIES -->
+            <div id="inner-properties-container" class="row">
+
+                <!-- INNER DIV 1 -->
+                <div id="inner-div" class="col-sm-6 col-md-6 col-lg-6">
+
+                    <form class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="control-label  col-sm-4">Your file:</label>
+                            <div class="col-sm-4">
+                                <h5>some_file.stl</h5>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Compute technology:</label>
+                            <div class="col-sm-5">
+                                <div class="btn-group">
+                                    <!-- REFACTOR!!! GET THIS DATA FROM DB !  -->
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">FDM&nbsp;<span class="caret"></span></button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">DMLS</a></li>
+                                        <li><a href="#">EBF</a></li>
+                                        <li><a href="#">EBM</a></li>
+                                        <li><a href="#">SLM</a></li>
+                                        <li><a href="#">SHS</a></li>
+                                        <li><a href="#">SLS</a></li>
+                                        <li><a href="#">LOM</a></li>
+                                        <li><a href="#">SLA</a></li>
+                                        <li><a href="#">DLP</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Material:</label>
+                            <div class="col-sm-8">
+                                <div class="btn-group">
+                                    <!-- REFACTOR!!! GET THIS DATA FROM DB ! MUST CORRELATE WITH COMPUTE TECHNOLOGY -->
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">ABS&nbsp;<span class="caret"></span></button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">PLA</a></li>
+                                        <li><a href="#">HDPE</a></li>
+                                        <li><a href="#">Metal alloy</a></li>
+                                        <li><a href="#">Titanum alloy</a></li>
+                                        <li><a href="#">Stainless steel</a></li>
+                                        <li><a href="#">Aluminium</a></li>
+                                        <li><a href="#">Thermoplastic powder</a></li>
+                                        <li><a href="#">Photopolymer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Material color:</label>
+                            <div class="col-sm-8">
+                                <div class="btn-group">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Layer thickness:</label>
+                            <div class="col-sm-2">
+                                <!-- REFACTOR!!! GET THIS DATA FROM DB ! MUST CORRELATE WITH COMPUTE TECHNOLOGY -->
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-5">
+                                <!-- REFACTOR!!! GET THIS DATA FROM DB ! MUST CORRELATE WITH COMPUTE TECHNOLOGY -->
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">mm&nbsp;<span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">inch</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Minimal infill rate:</label>
+                            <div class="col-sm-2">
+                                <!-- REFACTOR!!! GET THIS DATA FROM DB ! MUST CORRELATE WITH COMPUTE TECHNOLOGY -->
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="button" class="btn btn-default disabled">%</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Quantity:</label>
+                            <div class="col-sm-2">
+                                <!-- REFACTOR!!! GET THIS DATA FROM DB ! MUST CORRELATE WITH COMPUTE TECHNOLOGY -->
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="button" class="btn btn-default disabled">units</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Needs polishing: &nbsp;&nbsp; <input type="checkbox"> </label>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- INNER DIV 2 -->
+                <div id="inner-div2" class="col-sm-6 col-md-6 col-lg-6">
+
+                    <form class="form-horizontal" role="form">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <h4>Dimensions</h4>
+                                <img style="width: 200px; height: 150px;" src="https://www.google.com.ua/search?q=3d+printing+dimensions&biw=1316&bih=595&source=lnms&tbm=isch&sa=X&ei=qgmGVJO_AuTOygOpqYKQDw&ved=0CAYQ_AUoAQ#facrc=_&imgdii=_&imgrc=6PI80o1z7ua2tM%253A%3BBr7vy41GqDjNCM%3Bhttps%253A%252F%252Fbicom-bootsindustries.netdna-ssl.com%252Fwordpress%252Fwp-content%252Fuploads%252F2013%252F07%252FPrinter-Dimensions.jpg%3Bhttps%253A%252F%252Fbootsindustries.com%252Frostock-bi-v1-0-general-information%252F%3B787%3B1024">
+                            </div>
+
+                            <div class="col-sm-8 col-md-8 col-lg-8" style="margin-top: 30px;">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Scalling ratio:</label>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-default disabled">1:</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Manufacturing time:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-top: 30px;">
+                                    <div class="col-sm-offset-4 col-sm-6">
+                                        <button type="button" class="btn btn-default btn-lg">FIND MANUFACTURERS</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="row" style="height:30px; background-color: #9bb7c0">footer div [PARTIAL]</div>
+    </div>
+
+
+</body>
+</html>
