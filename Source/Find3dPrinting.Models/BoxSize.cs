@@ -18,7 +18,7 @@ namespace Find3dPrinting.Models
         {
             this.Printers = new HashSet<Printer>();
         }
-    
+        
         public long BoxSizes_id { get; set; }
         public float X_dimm_size { get; set; }
         public float Y_dimm_size { get; set; }

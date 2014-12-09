@@ -15,17 +15,30 @@ namespace Find3dPrinting.Data.EF
     using System.Data.Entity.Infrastructure;
     using Find3dPrinting.Models;
 
-    public partial class Find3dPrintingContext : DbContext
+    public partial class Find3dPrintingDBContext : DbContext
     {
-        public Find3dPrintingContext()
-            : base("name=Find3dPrintingEntities")
+        public Find3dPrintingDBContext()
+            : base("Find3dPrintingEntities")
         {
             
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            modelBuilder.Entity<BoxSize>().HasKey<long>(k => k.BoxSizes_id);
+            modelBuilder.Entity<ComputeTechnology>().HasKey<long>(k => k.ComputeTechnologies_id);
+            modelBuilder.Entity<Delivery>().HasKey<long>(k => k.Delivery_id);
+            modelBuilder.Entity<Delivery_Manufacturers>().HasKey<long>(k => k.Delivery_Manufacturers_id);
+            modelBuilder.Entity<Manufacturer>().HasKey<long>(k => k.Manufacturers_id);
+            modelBuilder.Entity<Manufacturers_Printers>().HasKey<long>(k => k.Manufacturers_Printers_id);
+            modelBuilder.Entity<Manufacturers_Services>().HasKey<long>(k => k.Manufacturers_Services_id);
+            modelBuilder.Entity<Material>().HasKey<long>(k => k.Materials_id);
+            modelBuilder.Entity<Payment>().HasKey<long>(k => k.Payments_id);
+            modelBuilder.Entity<Payments_Manufacturers>().HasKey<long>(k => k.Payments_Manufacturers_id);
+            modelBuilder.Entity<Printer>().HasKey<long>(k => k.Printers_id);
+            modelBuilder.Entity<Service>().HasKey<long>(k => k.Services_id);
+            modelBuilder.Entity<User>().HasKey<long>(k => k.Users_id);
+
         }
 
         public DbSet<BoxSize> BoxSizes { get; set; }
