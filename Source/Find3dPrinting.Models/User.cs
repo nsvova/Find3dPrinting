@@ -14,11 +14,12 @@ namespace Find3dPrinting.Models
     
     public partial class User
     {
-        public long Users_id { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string PhoneNumber { get; set; }
-    
-        public virtual Manufacturer Manufacturer { get; set; }
+        public long UsersId { get; set; } // Users_id (Primary key)
+        public string Email { get; set; } // Email
+        public string Password { get; set; } // Password
+        public string PhoneNumber { get; set; } // PhoneNumber
+
+        // Reverse navigation
+        public virtual Manufacturer Manufacturer { get; set; } // Manufacturers.FK_Manufacturers_Users
     }
 }

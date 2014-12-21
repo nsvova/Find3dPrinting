@@ -65,13 +65,13 @@
     <Compile Include="BoxSize.cs" />
     <Compile Include="ComputeTechnology.cs" />
     <Compile Include="Delivery.cs" />
-    <Compile Include="Delivery_Manufacturers.cs" />
+    <Compile Include="DeliveryManufacturers.cs" />
     <Compile Include="Manufacturer.cs" />
-    <Compile Include="Manufacturers_Printers.cs" />
-    <Compile Include="Manufacturers_Services.cs" />
+    <Compile Include="ManufacturersPrinters.cs" />
+    <Compile Include="ManufacturersServices.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="Payment.cs" />
-    <Compile Include="Payments_Manufacturers.cs" />
+    <Compile Include="PaymentsManufacturers.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.cs" />

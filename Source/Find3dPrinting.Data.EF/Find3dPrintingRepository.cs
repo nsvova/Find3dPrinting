@@ -12,13 +12,10 @@ namespace Find3dPrinting.Data.EF
     {
         public virtual ModelType GetById(int id)
         {
-            return new ModelType();
-            /*
             using (var context = new Find3dPrintingDBContext())
             {
                 return context.Set<ModelType>().Find(id);
             }
-            */
         }
 
         public virtual ModelType GetById(int[] id)
@@ -28,34 +25,31 @@ namespace Find3dPrinting.Data.EF
 
         public virtual void Add(ModelType model)
         {
-            /*
             using (var context = new Find3dPrintingDBContext())
             {
                 context.Set<ModelType>().Add(model);
+                context.SaveChanges();
             }
-             * */
         }
 
         public virtual void Remove(ModelType model)
         {
-            /*
             using (var context = new Find3dPrintingDBContext())
             {
                 context.Set<ModelType>().Remove(model);
+                context.SaveChanges();
             }
-             * */
         }
 
         public virtual void Remove(int id)
         {
-            /*
             ModelType modelToDelete = this.GetById(id);
 
             using (var context = new Find3dPrintingDBContext())
             {
                 context.Set<ModelType>().Remove(modelToDelete);
+                context.SaveChanges();
             }
-             * */
         }
 
         public virtual void Update(int id, ModelType newModel)
@@ -73,27 +67,20 @@ namespace Find3dPrinting.Data.EF
         public virtual ModelType GetFirst()
         {
             return new ModelType();
-            /*
             using (var context = new Find3dPrintingDBContext())
             {
                 return context.Set<ModelType>().First();
             }
-             * */
         }
 
         public virtual IList<ModelType> GetAll()
         {
-            return new List<ModelType>()
-            {
-                new ModelType(),
-                new ModelType()
-            };
-            /*
+            
             using (var context = new Find3dPrintingDBContext())
             {
                 return context.Set<ModelType>().ToList();
             }
-             * */
+             
         }
     }
 }

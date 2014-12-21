@@ -14,21 +14,24 @@ namespace Find3dPrinting.Models
     
     public partial class Manufacturer
     {
+        public long ManufacturersId { get; set; } // Manufacturers_id (Primary key)
+        public string OrganizationName { get; set; } // OrganizationName
+        public long UserId { get; set; } // User_id
+
+        // Reverse navigation
+        public virtual ICollection<DeliveryManufacturers> DeliveryManufacturers { get; set; } // Delivery_Manufacturers.FK_Delivery_Manufacturers_Manufacturers
+        public virtual ICollection<ManufacturersPrinters> ManufacturersPrinters { get; set; } // Manufacturers_Printers.FK_Manufacturers_Printers_Manufacturers
+        public virtual ICollection<PaymentsManufacturers> PaymentsManufacturers { get; set; } // Payments_Manufacturers.FK_Payments_Manufacturers_Manufacturers
+        public virtual ManufacturersServices ManufacturersServices { get; set; } // Manufacturers_Services.FK_Manufacturers_Services_Manufacturers
+
+        // Foreign keys
+        public virtual User User { get; set; } // FK_Manufacturers_Users
+
         public Manufacturer()
         {
-            this.Delivery_Manufacturers = new HashSet<Delivery_Manufacturers>();
-            this.Manufacturers_Printers = new HashSet<Manufacturers_Printers>();
-            this.Payments_Manufacturers = new HashSet<Payments_Manufacturers>();
+            DeliveryManufacturers = new List<DeliveryManufacturers>();
+            ManufacturersPrinters = new List<ManufacturersPrinters>();
+            PaymentsManufacturers = new List<PaymentsManufacturers>();
         }
-    
-        public long Manufacturers_id { get; set; }
-        public string OrganizationName { get; set; }
-        public long User_id { get; set; }
-    
-        public virtual ICollection<Delivery_Manufacturers> Delivery_Manufacturers { get; set; }
-        public virtual ICollection<Manufacturers_Printers> Manufacturers_Printers { get; set; }
-        public virtual Manufacturers_Services Manufacturers_Services { get; set; }
-        public virtual User User { get; set; }
-        public virtual ICollection<Payments_Manufacturers> Payments_Manufacturers { get; set; }
     }
 }

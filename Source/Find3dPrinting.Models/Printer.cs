@@ -14,21 +14,24 @@ namespace Find3dPrinting.Models
     
     public partial class Printer
     {
+        public long PrintersId { get; set; } // Printers_id (Primary key)
+        public int NozzleThickness { get; set; } // NozzleThickness
+        public string PrinterName { get; set; } // PrinterName
+        public long BoxSizeId { get; set; } // BoxSize_id
+        public long MaterialId { get; set; } // Material_id
+        public long ComputeTechnologyId { get; set; } // ComputeTechnology_id
+
+        // Reverse navigation
+        public virtual ICollection<ManufacturersPrinters> ManufacturersPrinters { get; set; } // Manufacturers_Printers.FK_Manufacturers_Printers_Printers
+
+        // Foreign keys
+        public virtual BoxSize BoxSize { get; set; } // FK_Printers_BoxSizes
+        public virtual ComputeTechnology ComputeTechnology { get; set; } // FK_Printers_ComputeTechnologies
+        public virtual Material Material { get; set; } // FK_Printers_Materials
+
         public Printer()
         {
-            this.Manufacturers_Printers = new HashSet<Manufacturers_Printers>();
+            ManufacturersPrinters = new List<ManufacturersPrinters>();
         }
-    
-        public long Printers_id { get; set; }
-        public int NozzleThickness { get; set; }
-        public string PrinterName { get; set; }
-        public long BoxSize_id { get; set; }
-        public long Material_id { get; set; }
-        public long ComputeTechnology_id { get; set; }
-    
-        public virtual BoxSize BoxSize { get; set; }
-        public virtual ComputeTechnology ComputeTechnology { get; set; }
-        public virtual ICollection<Manufacturers_Printers> Manufacturers_Printers { get; set; }
-        public virtual Material Material { get; set; }
     }
 }

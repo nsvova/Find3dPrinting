@@ -14,14 +14,15 @@ namespace Find3dPrinting.Models
     
     public partial class ComputeTechnology
     {
+        public long ComputeTechnologiesId { get; set; } // ComputeTechnologies_id (Primary key)
+        public string ComputeTechnology_ { get; set; } // ComputeTechnology
+
+        // Reverse navigation
+        public virtual ICollection<Printer> Printers { get; set; } // Printers.FK_Printers_ComputeTechnologies
+
         public ComputeTechnology()
         {
-            this.Printers = new HashSet<Printer>();
+            Printers = new List<Printer>();
         }
-    
-        public long ComputeTechnologies_id { get; set; }
-        public string ComputeTechnology1 { get; set; }
-    
-        public virtual ICollection<Printer> Printers { get; set; }
     }
 }

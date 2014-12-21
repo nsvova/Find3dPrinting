@@ -14,14 +14,15 @@ namespace Find3dPrinting.Models
     
     public partial class Material
     {
+        public long MaterialsId { get; set; } // Materials_id (Primary key)
+        public string Material_ { get; set; } // Material
+
+        // Reverse navigation
+        public virtual ICollection<Printer> Printers { get; set; } // Printers.FK_Printers_Materials
+
         public Material()
         {
-            this.Printers = new HashSet<Printer>();
+            Printers = new List<Printer>();
         }
-    
-        public long Materials_id { get; set; }
-        public string Material1 { get; set; }
-    
-        public virtual ICollection<Printer> Printers { get; set; }
     }
 }

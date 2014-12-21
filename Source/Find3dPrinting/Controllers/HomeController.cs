@@ -17,18 +17,22 @@ namespace Find3dPrinting.Controllers
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
             /*Example how to work with Ninject*/
-
-
-
+            /*
             IKernel kernel = new StandardKernel(new Find3dPrintingBinding());
-
-            kernel.Get<IRepository<User>>().Add(new User() 
-            { 
-                Email = "test@mail.com"
+            
+            //Add new user
+            kernel.Get<IRepository<User>>().Add(new User()
+            {
+                UsersId = 0,
+                Email = "test@mail.com",
+                Password = "123",
+                PhoneNumber = "+123",
             });
 
-            IEnumerable<User> user = kernel.Get<IRepository<User>>().GetAll().Where(usr => usr.Email == "some@email.com");
-           
+            //Get all users
+            IEnumerable<User> users = kernel.Get<IRepository<User>>().GetAll();
+
+             * */
 
             return View();
         }

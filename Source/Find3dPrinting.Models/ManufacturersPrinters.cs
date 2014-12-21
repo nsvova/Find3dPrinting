@@ -12,13 +12,14 @@ namespace Find3dPrinting.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Manufacturers_Printers
+    public partial class ManufacturersPrinters
     {
-        public long Manufacturers_Printers_id { get; set; }
-        public long Manufacturer_id { get; set; }
-        public long Printer_id { get; set; }
-    
-        public virtual Manufacturer Manufacturer { get; set; }
-        public virtual Printer Printer { get; set; }
+        public long ManufacturersPrintersId { get; set; } // Manufacturers_Printers_id (Primary key)
+        public long ManufacturerId { get; set; } // Manufacturer_id
+        public long PrinterId { get; set; } // Printer_id
+
+        // Foreign keys
+        public virtual Manufacturer Manufacturer { get; set; } // FK_Manufacturers_Printers_Manufacturers
+        public virtual Printer Printer { get; set; } // FK_Manufacturers_Printers_Printers
     }
 }

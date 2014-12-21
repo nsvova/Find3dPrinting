@@ -14,14 +14,15 @@ namespace Find3dPrinting.Models
     
     public partial class Delivery
     {
+        public long DeliveryId { get; set; } // Delivery_id (Primary key)
+        public string ShippingMethod { get; set; } // ShippingMethod
+
+        // Reverse navigation
+        public virtual ICollection<DeliveryManufacturers> DeliveryManufacturers { get; set; } // Delivery_Manufacturers.FK_Delivery_Manufacturers_Delivery
+
         public Delivery()
         {
-            this.Delivery_Manufacturers = new HashSet<Delivery_Manufacturers>();
+            DeliveryManufacturers = new List<DeliveryManufacturers>();
         }
-    
-        public long Delivery_id { get; set; }
-        public string ShippingMethod { get; set; }
-    
-        public virtual ICollection<Delivery_Manufacturers> Delivery_Manufacturers { get; set; }
     }
 }

@@ -14,17 +14,18 @@ namespace Find3dPrinting.Models
     
     public partial class BoxSize
     {
+        public long BoxSizesId { get; set; } // BoxSizes_id (Primary key)
+        public float XDimmSize { get; set; } // X_dimm_size
+        public float YDimmSize { get; set; } // Y_dimm_size
+        public float ZDimmSize { get; set; } // Z_dimm_size
+        public float ScallingRatio { get; set; } // ScallingRatio
+
+        // Reverse navigation
+        public virtual ICollection<Printer> Printers { get; set; } // Printers.FK_Printers_BoxSizes
+
         public BoxSize()
         {
-            this.Printers = new HashSet<Printer>();
+            Printers = new List<Printer>();
         }
-        
-        public long BoxSizes_id { get; set; }
-        public float X_dimm_size { get; set; }
-        public float Y_dimm_size { get; set; }
-        public float Z_dimm_size { get; set; }
-        public float ScallingRatio { get; set; }
-    
-        public virtual ICollection<Printer> Printers { get; set; }
     }
 }

@@ -14,14 +14,15 @@ namespace Find3dPrinting.Models
     
     public partial class Payment
     {
+        public long PaymentsId { get; set; } // Payments_id (Primary key)
+        public string PaymentMethod { get; set; } // PaymentMethod
+
+        // Reverse navigation
+        public virtual ICollection<PaymentsManufacturers> PaymentsManufacturers { get; set; } // Payments_Manufacturers.FK_Payments_Manufacturers_Payments
+
         public Payment()
         {
-            this.Payments_Manufacturers = new HashSet<Payments_Manufacturers>();
+            PaymentsManufacturers = new List<PaymentsManufacturers>();
         }
-    
-        public long Payments_id { get; set; }
-        public string PaymentMethod { get; set; }
-    
-        public virtual ICollection<Payments_Manufacturers> Payments_Manufacturers { get; set; }
     }
 }

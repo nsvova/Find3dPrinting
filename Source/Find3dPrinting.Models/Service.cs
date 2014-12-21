@@ -14,9 +14,10 @@ namespace Find3dPrinting.Models
     
     public partial class Service
     {
-        public long Services_id { get; set; }
-        public string ServiceName { get; set; }
-    
-        public virtual Manufacturers_Services Manufacturers_Services { get; set; }
+        public long ServicesId { get; set; } // Services_id (Primary key)
+        public string ServiceName { get; set; } // ServiceName
+
+        // Reverse navigation
+        public virtual ManufacturersServices ManufacturersServices { get; set; } // Manufacturers_Services.FK_Manufacturers_Services_Services
     }
 }
